@@ -1,0 +1,267 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --maroon: #7b2d3b;
+  --maroon-light: #a04050;
+  --gold: #e2b857;
+  --cream: #faf6f0;
+  --parchment: #f5efe4;
+  --ink: #2c2420;
+  --ink-light: #5a4e44;
+  --highlight-bg: rgba(123, 45, 59, 0.1);
+  --highlight-border: #7b2d3b;
+  --direction-color: #6b5b50;
+}
+
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ---------- HEADER ---------- */
+.haggadah-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #f0e6d3;
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+}
+
+.haggadah-header h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #e2b857, #f5d78e, #e2b857);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.15rem;
+}
+
+.haggadah-header .subtitle {
+  font-style: italic;
+  color: #a0b4c8;
+  font-size: 1.15rem;
+}
+
+.haggadah-header .role {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  border: 1px solid rgba(226,184,87,0.4);
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #a0b4c8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--gold); }
+
+/* ---------- CONTENT ---------- */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(123,45,59,0.12);
+}
+.section:last-child { border-bottom: none; }
+
+.section h2 {
+  font-size: 1.8rem;
+  color: var(--maroon);
+  margin-bottom: 0.15rem;
+  line-height: 1.3;
+}
+
+.section h2 .emoji-icon {
+  margin-right: 0.3rem;
+}
+
+.stage-direction {
+  font-style: italic;
+  color: var(--direction-color);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.speaker {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.speaker-text {
+  font-style: italic;
+  color: var(--ink-light);
+  margin-bottom: 0.75rem;
+}
+
+p { margin-bottom: 0.75rem; }
+
+/* ---------- YOUR PART HIGHLIGHT ---------- */
+.your-part {
+  background: var(--highlight-bg);
+  border-left: 4px solid var(--highlight-border);
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.your-part-label {
+  display: inline-block;
+  background: var(--maroon);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.2rem 0.75rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.your-part p,
+.your-part .speaker-text {
+  font-style: normal;
+  color: var(--ink);
+}
+
+/* ---------- EVERYONE LINES ---------- */
+.everyone {
+  font-weight: bold;
+  color: var(--maroon);
+  margin: 0.75rem 0;
+}
+
+/* ---------- NEXT CUE ---------- */
+.next-cue {
+  text-align: right;
+  font-style: italic;
+  color: var(--maroon-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- PLAGUES ---------- */
+.plague-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  margin: 0.75rem 0;
+  list-style: none;
+}
+.plague-list li {
+  font-weight: bold;
+  color: var(--maroon);
+  font-size: 0.95rem;
+}
+
+/* ---------- DAYENU ---------- */
+.dayenu {
+  font-weight: bold;
+  color: var(--maroon);
+  text-align: center;
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+}
+
+/* ---------- MEAL BREAK ---------- */
+.meal-break {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, rgba(226,184,87,0.1), rgba(123,45,59,0.06));
+  border-radius: 12px;
+}
+.meal-break h2 {
+  color: var(--maroon);
+  font-size: 2rem;
+}
+.meal-break .stage-direction {
+  margin-bottom: 0;
+}
+
+/* ---------- FOOTER ---------- */
+.haggadah-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--maroon);
+  font-style: italic;
+  font-size: 1.1rem;
+  border-top: 2px solid rgba(123,45,59,0.15);
+  margin-top: 1rem;
+}
+
+/* ---------- DIVIDER ---------- */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--maroon);
+  opacity: 0.3;
+  margin: 0 auto 2rem;
+  border: none;
+}
+
+/* ---------- OLLIE SPECIAL STYLES ---------- */
+.ollie-callout {
+  background: linear-gradient(135deg, #fff3cd, #ffeeba);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.ollie-callout p {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.ollie-callout p:last-child { margin-bottom: 0; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .haggadah-header { padding: 2rem 1rem 1.75rem; }
+  .haggadah-header h1 { font-size: 2.4rem; }
+  .content { padding: 1.5rem 1rem 3rem; }
+  .section h2 { font-size: 1.5rem; }
+  .your-part { padding: 1rem 1.15rem; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  .haggadah-header h1 { font-size: 2rem; }
+  .haggadah-header .subtitle { font-size: 1rem; }
+  .content { padding: 1.25rem 0.85rem 2.5rem; }
+  .section h2 { font-size: 1.35rem; }
+  .your-part { padding: 0.85rem 1rem; margin-left: -0.5rem; margin-right: -0.5rem; }
+}
+
+/* ---------- PRINT ---------- */
+@media print {
+  .back-link { display: none; }
+  .haggadah-header { background: white; color: var(--ink); }
+  .haggadah-header h1 { background: none; -webkit-text-fill-color: var(--maroon); color: var(--maroon); }
+  .haggadah-header .subtitle { color: var(--ink-light); }
+  body { font-size: 12pt; }
+}
