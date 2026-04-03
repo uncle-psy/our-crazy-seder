@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Crazy Seder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #f0e6d3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(to right, #e2b857, #f5d78e, #e2b857);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #a0b4c8;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(226, 184, 87, 0.25);
+      border-radius: 16px;
+      padding: 1.75rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: #f0e6d3;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .card:hover {
+      background: rgba(226, 184, 87, 0.15);
+      border-color: rgba(226, 184, 87, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(226, 184, 87, 0.15);
+    }
+
+    .card:active {
+      transform: translateY(-1px);
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      color: #a0b4c8;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .star {
+      position: fixed;
+      background: #e2b857;
+      border-radius: 50%;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #6b7f95;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2rem; }
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+      .card { padding: 1.25rem 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Crazy Seder</h1>
+  <p class="subtitle">Tap your name to download your personalized Haggadah!</p>
+
+  <div class="grid">
+    <a class="card" href="haggadahs/Haggadah_Daisy.pdf" download>
+      <span class="emoji">🌼</span>
+      <span class="name">Daisy</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_David.pdf" download>
+      <span class="emoji">⭐</span>
+      <span class="name">David</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Monica.pdf" download>
+      <span class="emoji">✨</span>
+      <span class="name">Monica</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Moto.pdf" download>
+      <span class="emoji">🏍️</span>
+      <span class="name">Moto</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Ryan.pdf" download>
+      <span class="emoji">🦁</span>
+      <span class="name">Ryan</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Tai.pdf" download>
+      <span class="emoji">🌊</span>
+      <span class="name">Tai</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Ollie.pdf" download>
+      <span class="emoji">🫒</span>
+      <span class="name">Ollie</span>
+      <span class="label">Download</span>
+    </a>
+    <a class="card" href="haggadahs/Haggadah_Zoe.pdf" download>
+      <span class="emoji">🌸</span>
+      <span class="name">Zoe</span>
+      <span class="label">Download</span>
+    </a>
+  </div>
+
+  <footer>Chag Pesach Sameach! 🍷</footer>
+</body>
+</html>
